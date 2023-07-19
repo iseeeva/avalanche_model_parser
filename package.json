@@ -1,0 +1,17 @@
+{
+  "name": "avalanche_model_parser",
+  "version": "1.0.0",
+  "description": "Avalanche Global Model Parser",
+  "main": "./src/index.js",
+  "types":"./src/index.d.ts",
+  "scripts": {
+    "test": "node ./test/index.test.js"
+  },
+  "type": "module",
+  "author": "iseeeva",
+  "license": "ISC",
+  "dependencies": {
+    "xml-js": "^1.6.11",
+    "r_lib": "iseeeva/r_lib#d559a84a4322ea9cd2f91a0a070dbaca3bb3b70d"
+  }
+}
