@@ -1,9 +1,11 @@
 /**
- * Remove All Spaces from The String
- **/
-export const RemoveSpace = (str) => str.replace(/\s+/, '');
+ * Check XML Array (for xml-js library)
+ */
+export function XMLArray(Input) {
+    return Array.isArray(Input) ? Input : [Input];
+}
 /**
- * Fill The JSON Object with Path
+ * Fill the Object with Path
  **/
 export function FillObject(Object, Path) {
     let Current = Object;
@@ -12,16 +14,18 @@ export function FillObject(Object, Path) {
         Current = Current[Key];
     }
 }
-/**
- * Extend Value For a Sign
- **/
-export function SignExtend(value, type, bits) {
-    const shift = type - bits;
-    return (value << shift) >> shift;
-}
-/**
- * Integer to Signed Short
- **/
-export function SignShort(value) {
-    return value >= 0x8000 ? value - 0x10000 : value;
+export class Sign {
+    /**
+     * Integer to Signed Short
+     **/
+    static Short(Value) {
+        return Value >= 0x8000 ? Value - 0x10000 : Value;
+    }
+    /**
+     * Extend value for a sign
+     **/
+    static Extend(Value, Type, Bits) {
+        const Shift = Type - Bits;
+        return (Value << Shift) >> Shift;
+    }
 }
